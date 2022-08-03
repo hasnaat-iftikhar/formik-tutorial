@@ -1,0 +1,96 @@
+@import "./helpers.scss";
+
+.contactFormSection {
+  height: 100vh;
+
+  .contactFormContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .contentBox {
+      text-align: center;
+      margin-bottom: 30px;
+
+      .headingTxt {
+        font-size: 40px;
+      }
+
+      .taglineTxt {
+      }
+    }
+
+    .authForm {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      width: 100%;
+
+      .fieldWrapperClassName {
+        width: auto;
+        padding: 2px 16px;
+        border: 1px solid $gray-lg;
+        height: 58px;
+        border-radius: 8px;
+
+        &.messageField {
+          height: 100px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          height: 100px;
+        }
+
+        .fieldClassName {
+          font-size: 14px;
+          color: #333333;
+          border: none;
+          width: 100%;
+          height: 100%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .errorMsg {
+        color: $red-color;
+        font-weight: 500;
+        font-size: 14px;
+        position: relative;
+        top: 5px;
+      }
+
+      .tacText {
+        // margin-top: 24px;
+
+        p {
+          text-align: center;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.0025em;
+          color: $black-100;
+          font-weight: 500;
+
+          a {
+            color: $blue-color;
+          }
+        }
+      }
+
+      .btnBox {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+
+        .btn {
+          padding: 29px 46px;
+        }
+      }
+    }
+  }
+}

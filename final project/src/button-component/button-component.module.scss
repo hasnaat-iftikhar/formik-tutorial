@@ -1,0 +1,66 @@
+@import "../helpers.scss";
+
+.appButton {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &.defaultBtn {
+    background: $primary-color;
+    border: 3px solid $primary-color;
+  }
+
+  &.lightBtn {
+    background-color: #f1f5ff;
+    color: $black-100 !important;
+    border: none;
+    width: 100%;
+
+    &:hover::before {
+      width: 0px;
+      height: 0px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background: white;
+    border-radius: 100%;
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  &.outlineBtn {
+    background-color: $white;
+
+    &:hover::before {
+      background-color: $primary-color;
+    }
+  }
+
+  .btnTxt {
+    color: $black-100;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    z-index: 1000;
+    position: relative;
+  }
+}
